@@ -10,7 +10,7 @@
 			snapThreshold: 0.8, //Percent threshold for snapping to position on touch end
 			snapDuration: 200, //Snap animation duration
 			closeOnOpen: true, //Close other item actions if a new one is moved
-			maxYDelta: 40, //Number of pixels touchDelta in the Y-axis before preventing swiping
+			maxYDelta: 40, //Number of pixels in the Y-axis before preventing swiping
 			initialXDelta: 25 //Number of pixels in the X-axis before allowing swiping
 		}, options);
 
@@ -105,7 +105,6 @@
 	}
 
 	function getTouchDelta(touch, data, settings) {
-
 		var xDelta = touch.x - data.touchStart.x + data.startLeft;
 		var yDelta = touch.y - data.touchStart.y;
 
