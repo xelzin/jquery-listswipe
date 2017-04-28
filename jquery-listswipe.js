@@ -58,7 +58,7 @@
 				else if (!data.initialXDeltaReached && Math.abs(touchDelta.xDelta) > settings.initialXDelta) {
 					data.initialXDeltaReached = true;
 					$item.css('left', touchDelta.xDelta + 'px');
-					
+
 				}
 				else if (data.initialXDeltaReached) {
 					$item.css('left', touchDelta.xDelta + 'px');
@@ -109,11 +109,11 @@
 		var xDelta = touch.x - data.touchStart.x + data.startLeft;
 		var yDelta = touch.y - data.touchStart.y;
 
-		if (!settings.leftAction && xDelta < 0) {
+		if (!settings.rightAction && xDelta < 0) {
 			xDelta = 0;
 		}
 
-		if (!settings.rightAction && xDelta > 0) {
+		if (!settings.leftAction && xDelta > 0) {
 			xDelta = 0;
 		}
 
